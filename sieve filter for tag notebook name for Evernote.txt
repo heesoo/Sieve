@@ -7,7 +7,7 @@ if header :contains ["to", "cc", "resent-to", "x-delivered-to"] "billpay@example
         set "subjwas" ": ${1}";
         deleteheader "Subject";
         # send the note to add Billpay notebook
-        addheader "Subject" "${1} @Billpay";
+        addheader "Subject" "${subjwas} @Billpay";
   }  
   redirect :copy "fm.z9234@m.evernote.com";
 }
